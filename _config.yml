@@ -1,4 +1,4 @@
-baseurl:     http://taoxiaolei.com
+baseurl:     http://www.taoxiaolei.com
 pygments:     true
 markdown:     rdiscount
 permalink:    /posts/:year-:month-:day-:title.html

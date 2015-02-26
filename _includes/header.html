@@ -10,5 +10,16 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/css/small.css" type="text/css" media="(max-width: 720px)"/>
         <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css" />
         <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png" type="image/x-icon" />
+        {% if site.baseurl contains 'taoxiaolei.com' and page.statistics != false %}
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?77ad97e56d68e5bb9ac78057f07d7bd8";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+        {% endif %}
     </head>
     <body>
