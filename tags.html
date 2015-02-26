@@ -1,0 +1,35 @@
+---
+layout: default
+title: 标签
+description: "An archive of posts sorted by tags."
+---
+
+<div class='tag_cloud'>
+{% assign tags_list = site.tags %}  
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+    	<a href="#{{ tag }}">{{ tag }}({{ site.tags[tag].size }})</a>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %} 
+    	<a href="#{{ tag[0] }}">{{ tag[0] }}({{ tag[1].size }})</a>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</div>
+
+{% for tag in site.tags %} 
+	<h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
+	<ul class="post-list">
+		{% assign pages_list = tag[1] %}  
+		{% for post in pages_list %}
+			{% if post.title != null %}
+			{% if group == null or group == post.group %}
+			<li><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} | {{ post.title }}</a></li>
+			{% endif %}
+			{% endif %}
+		{% endfor %}
+		{% assign pages_list = nil %}
+		{% assign group = nil %}
+	</ul>
+{% endfor %}
