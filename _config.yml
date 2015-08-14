@@ -1,5 +1,5 @@
-baseurl:     http://www.taoxiaolei.com
-pygments:     true
+baseurl:      http://www.taoxiaolei.com
+highlights:   pygments
 markdown:     rdiscount
 permalink:    /posts/:year-:month-:day-:title.html
 title:        陶晓磊
