@@ -1,9 +1,44 @@
-{% include header.html %}
-<div id="container">
-    {% include navigation.html %}
-    <div id="main">
-        <h2> {% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %} </h2>
-        {{ content }}
-    </div>
-</div>
-{% include footer.html %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta name="keywords" content="{% if page.keywords %}{{ page.keywords | join: ',' }}{% endif %}" />
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %} </title>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/default.css" type="text/css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css" />
+	<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png" type="image/x-icon" />
+	{% if site.baseurl contains 'taoxiaolei.com' and page.statistics != false %}
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?6dd36d07eea68507ffea5a429842beed";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	{% endif %}
+</head>
+<body>
+	<header>
+		<h1 class="logo"><a href="/"><img src="/images/logo.png" /></a></h1>
+		<ul class="navigation">
+			<li><a href="/archive.html">归档</a></li>
+			<li><a href="/tags.html">标签</a></li>
+			<li><a href="/about.html">关于</a></li>
+		</ul>
+	</header>
+	<main>
+		<div class="content">
+			{{ content }}
+		</div>
+	</main>
+	<footer>
+		<p style="text-align: center;">
+			2007-2015 &copy; <a href="/about.html">Tao Xiaolei</a>.
+		</p>
+	</footer>
+</body>
+</html>
