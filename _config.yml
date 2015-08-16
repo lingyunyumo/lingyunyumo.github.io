@@ -2,7 +2,7 @@ baseurl:      http://www.taoxiaolei.com
 highlights:   pygments
 markdown:     rdiscount
 permalink:    /posts/:year-:month-:day-:title.html
-title:        陶晓磊
+title:        陶晓磊的个人站点
 description:  陶晓磊的个人站点,记录心情与知识。
 keywords:     陶晓磊,个人站点,博客,心情,知识,编程
 author:       陶晓磊
