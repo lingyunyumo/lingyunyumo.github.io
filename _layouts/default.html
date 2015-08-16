@@ -5,7 +5,7 @@
 	<meta name="keywords" content="{% if page.keywords %}{{ page.keywords | join: ',' }}{% endif %}" />
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %} </title>
+	<title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.title }}</title>
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/default.css" type="text/css" />
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css" />
 	<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png" type="image/x-icon" />
