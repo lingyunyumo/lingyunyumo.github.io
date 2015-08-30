@@ -10,7 +10,7 @@ tags:
 2. EC2网页控制台，到Security Group开启以下端口
    1. 入站出站TCP的3389端口，用于RDP远程控制
    2. 入站出站TCP的1080和8388端口，Shadowsocks使用
-   3. **入站TCP和UDP的8989端口**，废了好一会儿发现Shadowsocks还要用这端口
+   3. **入站TCP和UDP的8989端口**，费了好一会儿发现Shadowsocks还要用这端口
    4. 其它端口如80和443等
 3. RDP到Windows系统，安装Python2.7
 4. pip安装Shadowsocks，`pip install shadowsocks`
@@ -29,7 +29,7 @@ tags:
     "method":"table"  // 加密方法，windows下安装openssl等麻烦，使用table方法最简单
 }
 
-{% highlightend %}
+{% endhighlight %}
 
 
 
