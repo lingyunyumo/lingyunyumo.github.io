@@ -14,11 +14,10 @@ tags:
    4. 其它端口如80和443等
 3. RDP到Windows系统，安装Python2.7
 4. pip安装Shadowsocks，`pip install shadowsocks`
-5. 创建C:\shadowsocks.json，文件内容见下方
+5. 创建`C:\shadowsocks.json`，文件内容见下方
 6. 运行Shadowsocks服务，`ssserver -c C:\shadowsocks.json`
 
 {% highlight json %}
-
 {
     "server":"0.0.0.0",  // 服务器地址，就这么四个0就可以了
     "server_port":8388,
@@ -28,7 +27,6 @@ tags:
     "timeout":600,
     "method":"table"  // 加密方法，windows下安装openssl等麻烦，使用table方法最简单
 }
-
 {% endhighlight %}
 
 
