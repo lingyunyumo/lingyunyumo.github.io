@@ -6,29 +6,25 @@ tags: [programing, engineering, blog]
 ---
 
 <div class="posts">
-  <div class="content full-bleed" id="recent-posts">
-  {% for post in site.posts limit:16 %}<a
-    href="{{ post.url }}" class="post-excerpt{% if post.photo_url %} photo{% endif %}">
-      <div class="padded-content">
-        <div class="title">{{ post.title }}</div>
-      {% if post.photo_url %}
-        <div class="image" style="background-image:url('{{ post.photo_url }}')"></div>
-      {% else %}
-        <!-- <div class="title">{{ post.title }}</div> -->
-        <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
-          {{ post.date | date: "%b %Y" }}
-        </info>
-        {% if post.description %}
-        <span class="body">{{ post.description | markdownify }}</span>
-        {% else %}
-        <span class="body">{{ post.excerpt | strip_html }}</span>
-        {% endif %}
-      {% endif %}<!-- post.photo_url -->
-      </div>
-    </a>{% endfor %}
-    <div class="breaker"></div>
-    <div class="end">
-      <a href="/archive.html">More...</a>
+  {% for post in site.posts limit:10 %}
+  <a href="{{ post.url }}" class="post-excerpt{% if post.photo_url %} photo{% endif %}">
+    <div class="title">{{ post.title }}</div>
+    <div datetime="{{ page.date | date: "%Y-%m-%d" }}">
+      {{ post.date | date: "%d %b %Y" }}
     </div>
+    {% if post.photo_url %}
+      <div class="image" style="background-image:url('{{ post.photo_url }}')"></div>
+    {% else %}
+      
+      {% if post.description %}
+      <span class="body">{{ post.description | markdownify }}</span>
+      {% else %}
+      <span class="body">{{ post.content | strip_html | truncate: 200 }}</span>
+      {% endif %}
+    {% endif %}
+  </a>
+  {% endfor %}
+  <div class="end">
+    <a href="/archive.html">更多日志...</a>
   </div>
 </div>
