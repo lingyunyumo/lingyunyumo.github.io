@@ -1,4 +1,4 @@
-baseurl:      http://www.taoxiaolei.com
+baseurl:      lingyunyumo.github.io
 highlights:   pygments
 # markdown:     rdiscount
 permalink:    /posts/:year-:month-:day-:title.html
