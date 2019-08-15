@@ -1,6 +1,6 @@
 baseurl:      http://www.taoxiaolei.com
 highlights:   pygments
-markdown:     rdiscount
+# markdown:     rdiscount
 permalink:    /posts/:year-:month-:day-:title.html
 title:        陶晓磊的个人站点
 description:  陶晓磊的个人站点,记录心情与知识。
